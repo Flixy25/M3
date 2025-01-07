@@ -1,0 +1,16 @@
+<script>
+    if (Hls.isSupported()) {
+        console.log("HLS.js está soportado");
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('https://cloclo61.cloud.mail.ru/videowl/view/25usaZumzubvas5U85mg_6d688156485d55fe3d118b5b82a64a45/g/no/360p_1/MjlMVC9NQUFOVWR0bng=.m3u8?double_encode=1');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            console.log('HLS.js: Manifest parsed successfully');
+        });
+    } else {
+        console.log("El navegador no soporta HLS.js");
+        var video = document.getElementById('video');
+        video.src = 'https://cloclo61.cloud.mail.ru/videowl/view/25usaZumzubvas5U85mg_6d688156485d55fe3d118b5b82a64a45/g/no/360p_1/MjlMVC9NQUFOVWR0bng=.m3u8?double_encode=1';
+    }
+</script>
