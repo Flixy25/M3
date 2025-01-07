@@ -1,4 +1,20 @@
-<script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <h1>Reproductor de Video HLS</h1>
+    
+    <video id="video" controls width="100%">
+        <source src="https://cloclo61.cloud.mail.ru/videowl/view/25usaZumzubvas5U85mg_6d688156485d55fe3d118b5b82a64a45/g/no/360p_1/MjlMVC9NQUFOVWR0bng=.m3u8?double_encode=1" type="application/x-mpegURL">
+        Tu navegador no soporta el formato de video m3u8.
+    </video>
+
+    <script>
     if (Hls.isSupported()) {
         console.log("HLS.js está soportado");
         var video = document.getElementById('video');
@@ -14,3 +30,5 @@
         video.src = 'https://cloclo61.cloud.mail.ru/videowl/view/25usaZumzubvas5U85mg_6d688156485d55fe3d118b5b82a64a45/g/no/360p_1/MjlMVC9NQUFOVWR0bng=.m3u8?double_encode=1';
     }
 </script>
+</body>
+</html>
